@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor sem vitae ullamcorper hendrerit. Aenean quis est ligula. Ut quis maximus diam. Nullam ut fringilla erat, ut dapibus mauris. Aenean sit amet arcu quis ante posuere condimentum. Sed eu quam ultrices nunc finibus congue vel et elit. Nunc vulputate mollis nunc, vel blandit velit convallis eu. Pellentesque sed neque ex. Phasellus eleifend velit ac condimentum interdum. Sed cursus scelerisque orci hendrerit venenatis. Pellentesque iaculis dignissim tortor, ut vestibulum libero tincidunt in. Donec pulvinar metus est, et eleifend magna pretium quis. Nullam urna augue, tempor vel sem id, imperdiet aliquet ipsum. Praesent finibus ante ac bibendum condimentum.</p>
+
+    <p>Pellentesque a dapibus urna, sed dictum velit. Mauris volutpat ac dolor eu eleifend. Nulla sagittis justo orci. Phasellus turpis purus, tristique eu convallis nec, viverra at magna. Suspendisse mauris est, ultrices vel dictum ut, accumsan sit amet risus. Cras id rhoncus arcu. Nulla eget sem ut leo vehicula mollis eget non lacus. Curabitur condimentum lectus tortor, non iaculis quam tempus in. In pulvinar, enim quis semper varius, nibh tortor placerat eros, vitae placerat lacus ante hendrerit urna. Nam id dolor eget odio bibendum efficitur. Integer est dui, vehicula vitae arcu ac, porta pharetra metus. Curabitur est nisi, elementum eu malesuada nec, interdum eget quam. Maecenas pretium mi id neque malesuada, in aliquam ante condimentum.</p>
+
+    <p>Phasellus accumsan urna metus, tempor interdum lorem mollis eget. Integer augue metus, malesuada vel tristique et, dapibus dignissim libero. Nunc quam nibh, vulputate vestibulum finibus id, scelerisque et dui. Ut rhoncus facilisis felis, ac lacinia elit condimentum vel. Pellentesque viverra, metus quis dictum egestas, risus velit tempus ipsum, viverra laoreet sem velit nec mi. Donec sit amet iaculis elit. Duis dui urna, fringilla ut lorem ut, eleifend luctus libero.</p>
+
+    <h2>Comments ({{ comments | length }})</h2>
+
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

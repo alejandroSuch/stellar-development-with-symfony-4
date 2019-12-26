@@ -4,10 +4,11 @@
 namespace App\Controller;
 
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ArticleController
+class ArticleController extends AbstractController
 {
     /**
      * @Route("/")
@@ -22,7 +23,14 @@ class ArticleController
      */
     public function show(string $slug): Response
     {
-        return new Response("Future page for $slug");
+        return $this->render('article/show.html.twig', [
+            'title' => ucwords(str_replace('-', ' ', $slug)),
+            'comments' => [
+                'Comentario 1',
+                'Comentario 2',
+                'Comentario 3'
+            ]
+        ]);
 
     }
 }
